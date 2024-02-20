@@ -1,3 +1,5 @@
+# ================# Common Commands #==================
+
 # clone git repo to local dir.:
 git clone https://<utl_to_github_repo>
 
@@ -53,7 +55,31 @@ get revert <commit_id>
 # bring back all the changes done by commit (opposite to revert):
 get cherry-pick <commit_id>
 
-=======================================================
+# ================# Git Branching #====================
+
+# create branch:
+git branch -c <branch_name>
+
+# switch to branch:
+git switch <branch_name>
+# deprecated: 
+git checkout <branch_name>
+
+# create & switch to branch:
+git switch -c <branch_name>
+
+# merge a branch to main:
+git merge <branch_name>
+
+# list all branch and active branch:
+git branch --list 
+
+# ================# Git Rebase #=======================
+
+# use below git rebase to branch_name for linear commit history to reduce confusion. 
+git rebase <branch_name>
+
+# ================# Git Push local repo #==============
 
 # GIT push local report to Github
 # In project Root Directory run below command:
@@ -74,4 +100,39 @@ git push -u <repo_reference> <branch_name>
 # e.g:
 git push -u origin main
 
-=======================================================
+# ================# Git Stash #========================
+
+# add current git index to stash:
+git stash 
+
+# to add current stash in git index & remove from stash:
+git stash pop
+
+# show stash: 
+git stash show
+
+# apply changes from specific stash:
+git stash apply stash@{2}
+
+# drop specific stash:
+git stash drop stash@{2}
+
+# clear stash all:
+git stall clear
+
+# git stash interactive change:
+git stash push -p
+# for untracked
+git stash push -u 
+git stash push -m <custome_message>
+
+# ================# Git Squash #========================
+
+# Git sqaush commit from Commit History:
+git rebase -i <commit_id_to_start>
+# replace pick with "squash", check using below git log command:
+git log --oneline
+# to check squashed commit, use reflog command:
+git reflog 
+
+========================================================
