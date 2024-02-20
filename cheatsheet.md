@@ -74,6 +74,9 @@ git merge <branch_name>
 # list all branch and active branch:
 git branch --list 
 
+# push branch to remote repo:
+git push origin HEAD:<branch_name>
+
 # ================# Git Rebase #=======================
 
 # use below git rebase to branch_name for linear commit history to reduce confusion. 
