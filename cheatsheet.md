@@ -50,10 +50,10 @@ git reset --hard <commit-id>
 git reset --hard 0089frg
 
 # revert / remove changes of specific commit:
-get revert <commit_id>
+git revert <commit_id>
 
 # bring back all the changes done by commit (opposite to revert):
-get cherry-pick <commit_id>
+git cherry-pick <commit_id>
 
 # ================# Git Branching #====================
 
